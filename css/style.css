@@ -1,0 +1,159 @@
+:root {
+    --app-background: #c5c5c5;
+    --text-color: #d9d9d9;
+    --display: #242424;
+    --cdisplay: #333333;
+    --white: #ffffff;
+    --indigo-dye: #284b63;
+}
+
+body {
+    background-color: var(--app-background);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+}
+
+
+#main {
+    padding: 30px;
+}
+
+#app-container {
+    display: grid;
+    background-color: #a5a5a5;
+    padding: 5px;
+    width: 600px;
+    height: 700px;
+    margin: 0 auto;
+    outline: 4px solid var(--display);
+    outline-offset: -4px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1.1fr 1.1fr 1.1fr 1.1fr 1.1fr 1.1fr;
+    grid-gap: 0.1px;
+    grid-template-areas: "display display display display"
+                         "cdisplay cdisplay cdisplay cdisplay"
+                         "clear clear divide multiply"
+                         "seven eigh nine minus"
+                         "four five six plus"
+                         "one two three equal"
+                         "zero zero decimal equal"
+                         "backspace sqrt exponent factorial";
+}
+
+
+#display {
+    background-color: var(--display);
+    color: var(--text-color);
+    grid-area: display;
+    text-align: right;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    padding: 30px;
+    outline: 1px solid rgba(209, 209, 209, 0.192);
+    outline-offset: -9px;
+}
+
+#cdisplay {
+    background-color: var(--cdisplay);
+    color: var(--text-color);
+    grid-area: cdisplay;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+    
+}
+
+.btn {
+    background-color: var(--display);
+    color: var(--text-color);
+}
+
+.btn:hover {
+    background-color: #424242;
+}
+
+#clear {
+    grid-area: clear;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#backspace {
+    grid-area: backspace;
+}
+
+#sqrt {
+    grid-area: sqrt;
+}
+
+#exponent {
+    grid-area: exponent;
+}
+
+#factorial {
+    grid-area: factorial;
+}
+
+
+
+
+
+
+
+
+
+
+
+#calculator-input-container {}
+
+
+/* Media Queries */
+
