@@ -2,75 +2,82 @@ const currentDisplay = document.querySelector('#cdisplay'); // Displays the valu
 const mainDisplay = document.querySelector('#display'); // Display for completed calculations
 const buttons = document.querySelectorAll('.btn');
 
-// ArrowRight ArrowLeft ArrowDown ArrowUp Enter Backspace 
+document.querySelector('.focus').focus();
 
 document.addEventListener('keydown', function(event) {
-    switch (event.key) {
+    switch (event.key){
+        case 'Escape':
+            document.getElementById('clear').click();
+            break;
         case 'Enter':
-            console.log('Enter Pressed');
+            document.getElementById('equal').click();
             break;
         case 'Backspace':
-            console.log('Backspace Pressed');
-            break;
-        case 'ArrowRight':
-            console.log('Right Pressed');
-            break;
-        case 'ArrowLeft':
-            console.log('Left Pressed');
-            break;
-        case 'ArrowDown':
-            console.log('Down Pressed');
-            break;
-        case 'ArrowUp':
-            console.log('Up Pressed');
+            document.getElementById('backspace').click();
             break;
         case '.':
-            console.log('Decimal Pressed');
+            document.getElementById('decimal').click();
             break;
         case '/':
-            console.log('Divide Pressed');
+            document.getElementById('divide').click();
             break;
         case '*':
-            console.log('Multiply Pressed');
+            document.getElementById('multiply').click();
             break;
         case '+':
-            console.log('Plus Pressed');
+            document.getElementById('plus').click();
             break;
         case '-':
-            console.log('Minus Pressed');
+            document.getElementById('minus').click();
             break;
         case '1':
-            console.log('1 Pressed');
+            document.getElementById('one').click();
             break;
         case '2':
-            console.log('2 Pressed');
+            document.getElementById('two').click();
             break;
         case '3':
-            console.log('3 Pressed');
+            document.getElementById('three').click();
             break;
         case '4':
-            console.log('4 Pressed');
+            document.getElementById('four').click();
             break;
         case '5':
-            console.log('5 Pressed');
+            document.getElementById('five').click();
             break;
         case '6':
-            console.log('6 Pressed');
+            document.getElementById('six').click();
             break;
         case '7':
-            console.log('7 Pressed');
+            document.getElementById('seven').click();
             break;
         case '8':
-            console.log('8 Pressed');
+            document.getElementById('eight').click();
             break;
         case '9':
-            console.log('9 Pressed');
+            document.getElementById('nine').click();
             break;
         case '0':
-            console.log('0 Pressed');
+            document.getElementById('zero').click();
             break;
     }
 })
+
+function keyboardClick(el, etype){
+    if (el.fireEvent) {
+        el.fireEvent('on' + etype);
+    } else {
+        const evObj = document.createEvent('Events');
+        evObj.initEvent(etype, true, false);
+        el.dispatchEvent(evObj);
+    }
+}
+
+
+
+
+
+
 
 buttons.forEach(function(currentBtn){
   currentBtn.addEventListener('click', event => {
